@@ -2,4 +2,12 @@ extends layout
 
 block content
   h1= title
-  - let watch=[{watch_brand:"Rolex",watch_price:"1000",watch_color:"Black"},{watch_brand:"Fossil",watch_price:"600",watch_color:"Gold"},{watch_brand:"Rado",watch_price:"800",watch_color:"Silver"}]
+  - let watch=[{watch_brand:"Rolex",watch_price:"1000",watch_color:"Black"},{watch_brand:"Fossil",watch_price:"600",watch_color:"Gold"},{watch_brand:"Rado",watch_price:"800",watch_color:"Silverb"}]
+  div(class="container-fluid mt-3")
+  div(class="row")
+    each watch,index in watch
+        table(style='width:100%')
+            tr
+                div(class="col-sm-2" ) #{watch.watch_brand}
+                div(class="col-sm-2" ) #{watch.watch_price}
+                div(class="col-sm-2" ) #{watch.watch_color}
