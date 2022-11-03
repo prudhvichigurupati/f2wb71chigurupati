@@ -6,4 +6,11 @@ block content
     div(class="container-fluid mt-3")
     div(class="row")
         each watch,index in watches
-            div(class="col-sm-2 bg-danger m-1 p-3" ) #{watch.watch_brand} - #{watch.watch_price} - #{watch.watch_color}
+            div(class="col-sm-2 bg-danger m-1 p-3"onclick=`buy(${index})`) #{watch.watch_brand} - #{watch.watch_price} - #{watch.watch_color}
+  
+    script.
+     
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }
